@@ -1,0 +1,76 @@
+<!-- <%- include partials/header.ejs %> -->
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BATTLESNARKS</title>
+
+    <link rel="icon" href="path_to_your_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="\images\Battleship Logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#">BattleSnark</a><button data-bs-toggle="collapse"
+                class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Setting 'nav-link active' to highlight current page -->
+                    <li class="nav-item nav-link"><a class="nav-link active" href="/">HOME</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="/page1">EASY MODE</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="/page3">HARD MODE</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="/page2">DONATE</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Setting the background image and Main Text -->
+    <header class="masthead"
+        style="background-image: url('assets/img/best_battleship.png');background-position: center;">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">BattleSNARK</h1>
+                        <p class="intro-text">Test your wits against a ZK-BattleSNARK and see if you can destroy all the
+                            enemy ships!</p>
+                        <!-- Creating Circlular Scroll button -->
+                        <a class="btn btn-link btn-circle" role="button" href="#download"><i
+                                class="fa fa-angle-double-down animated"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- creating lower section of homepgae -->
+    <section class="text-center download-section content-section" id="download">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h1>Here's how to play</h1>
+                <p>A very crafty battle tactician has hidden the coordinates of <b><u>one</u></b> enemy battleship
+                    inside a secret&nbsp;smart contract using a ZK-SNARK proof. It's your job to destroy the enemy
+                    ships&nbsp;through brute force. Enter your suspected coordinates and test your merit.</p>
+                <a class="btn btn-primary btn-lg btn-default" href="/page1">LET'S PLAY!</a>
+            </div>
+        </div>
+    </section>
+    <div class="map-clean"></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+</body>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>BATTLESNARKS</title>
+
+  <link rel="icon" href="path_to_your_favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="\images\Battleship Logo.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/untitled.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <style>
+    .connect-buffer {
+      padding: 10px;
+    }
+
+    .connect-contract {
+      padding: 10px;
+    }
+
+    #contractArea {
+      color: black;
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #grid-box1,
+    #grid-box2,
+    #grid-box3 {
+      padding: 10px;
+      background-color: rgba(110, 119, 110, 0.5);
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 24px;
+      color: white;
+      border-color: rgba(0, 128, 0, 0.5);
+    }
+  </style>
+
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="/">battlesnark</a><button data-bs-toggle="collapse"
+        class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
+          class="fa fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item nav-link"><a class="nav-link" href="/">HOME</a></li>
+          <!-- Setting 'nav-link active' to highlight current page -->
+          <li class="nav-item nav-link"><a class="nav-link active" href="/page1">EASY MODE</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/page3">HARD MODE</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/page2">DONATE</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead"
+    style="background-image: url('assets/img/BS%20Lets%20Play%20(2).png');background-size: cover;background-position: center;">
+    <div class="intro-body">
+      <div class="connect-buffer">
+
+        <!-- Connect to ZK-SNARK Smart Contract -->
+        <p id="contractArea">...</p>
+        <button class="connect-contract" id="zkContract" onclick="connectContract()">Connect to Contract to
+          Play</button>
+
+      </div>
+
+      <!-- Creating 3x3 Board Game Grid -->
+      <section class="container2" id="container2">
+        <!-- buttonClick funtion points to script.js file -->
+        <!-- data-value represents grid coordinate -->
+        <div class="tile" id="tile-1" onclick="buttonClick()" data-value="1">A1</div>
+        <div class="tile" id="tile-2" onclick="buttonClick2()" data-value="2">A2</div>
+        <div class="tile" id="tile-3" onclick="buttonClick3()" data-value="3">A3</div>
+        <div class="tile" id="tile-4" onclick="buttonClick4()" data-value="4">B1</div>
+        <div class="tile" id="tile-5" onclick="buttonClick5()" data-value="5">B2</div>
+        <div class="tile" id="tile-6" onclick="buttonClick6()" data-value="6">B3</div>
+        <div class="tile" id="tile-7" onclick="buttonClick7()" data-value="7">C1</div>
+        <div class="tile" id="tile-8" onclick="buttonClick8()" data-value="8">C2</div>
+        <div class="tile" id="tile-9" onclick="buttonClick9()" data-value="9">C3</div>
+
+      </section>
+      <section class="display announcer hide"></section>
+
+      <!-- Creating reset button -->
+      <section class="controls">
+        <button id="reset" onclick="resetBoard()">Reset</button>
+      </section>
+
+    </div>
+
+  </header>
+
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/grayscale.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+  </head>
+</body>
+
+</html>

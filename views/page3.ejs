@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>BATTLESNARKS</title>
+  
+  <link rel="icon" href="path_to_your_favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="\images\Battleship Logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/untitled.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <style>
+    .connect-buffer {
+      padding: 10px;
+    }
+
+    .connect-contract {
+      padding: 10px;
+    }
+
+    #contractArea {
+      color: black;
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #grid-box1,
+    #grid-box2,
+    #grid-box3 {
+      padding: 10px;
+      background-color: rgba(110, 119, 110, 0.5);
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 24px;
+      color: white;
+      border-color: rgba(0, 128, 0, 0.5);
+    }
+  </style>
+
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="/">battlesnark</a><button data-bs-toggle="collapse"
+        class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
+          class="fa fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item nav-link"><a class="nav-link" href="/">HOME</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/page1">EASY MODE</a></li>
+          <!-- Setting 'nav-link active' to highlight current page -->
+          <li class="nav-item nav-link"><a class="nav-link active" href="/page3">HARD MODE</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="/page2">DONATE</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead"
+    style="background-image: url('assets/img/BS%20Lets%20Play%20(2).png');background-size: cover;background-position: center;">
+    <div class="intro-body">
+      <div class="connect-buffer">
+
+        <!-- Connect to ZK-SNARK Smart Contract -->
+        <p id="contractArea">...</p>
+        <button class="connect-contract" id="zkContract" onclick="connectContract()">Connect to Contract to
+          Play</button>
+
+      </div>
+
+      <!-- Creating 6x6 Board Game Grid -->
+      <section class="container3">
+        <!-- buttonClick funtion points to scriptHardMode.js file -->
+        <!-- data-value represents grid coordinate -->
+        <div class="tile-hard" id="tile-1" onclick="buttonClick()" data-value="1">A1</div>
+        <div class="tile-hard" id="tile-2" onclick="buttonClick2()" data-value="2">A2</div>
+        <div class="tile-hard" id="tile-3" onclick="buttonClick3()" data-value="3">A3</div>
+        <div class="tile-hard" id="tile-4" onclick="buttonClick4()" data-value="4">A4</div>
+        <div class="tile-hard" id="tile-5" onclick="buttonClick5()" data-value="5">A5</div>
+        <div class="tile-hard" id="tile-6" onclick="buttonClick6()" data-value="6">A6</div>
+        <div class="tile-hard" id="tile-7" onclick="buttonClick7()" data-value="7">B1</div>
+        <div class="tile-hard" id="tile-8" onclick="buttonClick8()" data-value="8">B2</div>
+        <div class="tile-hard" id="tile-9" onclick="buttonClick9()" data-value="9">B3</div>
+        <div class="tile-hard" id="tile-10" onclick="buttonClick10()" data-value="10">B4</div>
+        <div class="tile-hard" id="tile-11" onclick="buttonClick11()" data-value="11">B5</div>
+        <div class="tile-hard" id="tile-12" onclick="buttonClick12()" data-value="12">B6</div>
+        <div class="tile-hard" id="tile-13" onclick="buttonClick13()" data-value="13">C1</div>
+        <div class="tile-hard" id="tile-14" onclick="buttonClick14()" data-value="14">C2</div>
+        <div class="tile-hard" id="tile-15" onclick="buttonClick15()" data-value="15">C3</div>
+        <div class="tile-hard" id="tile-16" onclick="buttonClick16()" data-value="16">C4</div>
+        <div class="tile-hard" id="tile-17" onclick="buttonClick17()" data-value="17">C5</div>
+        <div class="tile-hard" id="tile-18" onclick="buttonClick18()" data-value="18">C6</div>
+        <div class="tile-hard" id="tile-19" onclick="buttonClick19()" data-value="19">D1</div>
+        <div class="tile-hard" id="tile-20" onclick="buttonClick20()" data-value="20">D2</div>
+        <div class="tile-hard" id="tile-21" onclick="buttonClick21()" data-value="21">D3</div>
+        <div class="tile-hard" id="tile-22" onclick="buttonClick22()" data-value="22">D4</div>
+        <div class="tile-hard" id="tile-23" onclick="buttonClick23()" data-value="23">D5</div>
+        <div class="tile-hard" id="tile-24" onclick="buttonClick24()" data-value="24">D6</div>
+        <div class="tile-hard" id="tile-25" onclick="buttonClick25()" data-value="25">E1</div>
+        <div class="tile-hard" id="tile-26" onclick="buttonClick26()" data-value="26">E2</div>
+        <div class="tile-hard" id="tile-27" onclick="buttonClick27()" data-value="27">E3</div>
+        <div class="tile-hard" id="tile-28" onclick="buttonClick28()" data-value="28">E4</div>
+        <div class="tile-hard" id="tile-29" onclick="buttonClick29()" data-value="29">E5</div>
+        <div class="tile-hard" id="tile-30" onclick="buttonClick30()" data-value="30">E6</div>
+        <div class="tile-hard" id="tile-31" onclick="buttonClick31()" data-value="31">F1</div>
+        <div class="tile-hard" id="tile-32" onclick="buttonClick32()" data-value="32">F2</div>
+        <div class="tile-hard" id="tile-33" onclick="buttonClick33()" data-value="33">F3</div>
+        <div class="tile-hard" id="tile-34" onclick="buttonClick34()" data-value="34">F4</div>
+        <div class="tile-hard" id="tile-35" onclick="buttonClick35()" data-value="35">F5</div>
+        <div class="tile-hard" id="tile-36" onclick="buttonClick36()" data-value="36">F6</div>
+
+      </section>
+      <section class="display announcer hide"></section>
+
+      <!-- Creating reset button -->
+      <section class="controls">
+        <button id="reset" onclick="resetBoard()">Reset</button>
+      </section>
+
+    </div>
+
+  </header>
+
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/grayscale.js"></script>
+  <script src="/assets/js/checkProofs.js"></script>
+  <script src="assets/js/scriptHardMode.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+  </head>
+</body>
+
+</html>

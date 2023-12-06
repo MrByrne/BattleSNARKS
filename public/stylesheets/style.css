@@ -1,0 +1,59 @@
+/* Game Board Styling */
+
+.container2 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+
+    }
+
+.tile {
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    }
+
+.connect-contract {
+    border-radius: 10px;
+}
+
+#contractArea {
+    margin: 0px;
+}
+
+.display {
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Hard Mode Styling */
+.container3 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    max-width: 400px;
+}
+
+.tile-hard {
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid white;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
